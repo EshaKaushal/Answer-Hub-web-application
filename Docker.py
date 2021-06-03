@@ -1,20 +1,10 @@
-FROM python:3.7
-
-# Creating Application Source Code Directory
-RUN mkdir -p /usr/src/app
-
-# Setting Home Directory for containers
-WORKDIR /usr/src/app
-
-# Installing python dependencies
-COPY requirements.txt .
-RUN pip install  -r requirements.txt
-
-# Copying src code to Container
-COPY  . /usr/src/app
-RUN chmod 777 -R *
+FROM python:3.7-slim
 
 EXPOSE 8080
+ENV APP_HOME /app
+WORKDIR $APP_HOME
+COPY . ./
 
-# Running StreamLit Application
-CMD streamlit run --server.port 8080 --server.enableCORS false Streamlitapp.py
+RUN pip install requests streamlit
+
+CMD ["streamlit", "run", "--server.port", "8080", "--server.enableCORS", "false", "Streamlitapp.py"]
