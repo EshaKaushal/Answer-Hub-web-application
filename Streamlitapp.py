@@ -4,7 +4,8 @@ import requests
 import json
 
 #Get URL from Git env variables
-url = "https://mgmt590-restapi-es7glm5rsq-uc.a.run.app"
+#url = "https://mgmt590-restapi-es7glm5rsq-uc.a.run.app"
+url = os.environ.get('REST_API_URL')
 
 st.title("Question Answering Application")
 
