@@ -6,7 +6,8 @@ import os
 
 #Get URL from Git env variables
 #url = "https://mgmt590-restapi-es7glm5rsq-uc.a.run.app"
-url = os.environ.get('REST_API_URL')
+url = format(os.environ.get('REST_API_URL'))
+print("REST API URL is ",url)
 
 st.title("Question Answering Application")
 
