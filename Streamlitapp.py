@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import requests
 import json
+import os
 
 #Get URL from Git env variables
 #url = "https://mgmt590-restapi-es7glm5rsq-uc.a.run.app"
