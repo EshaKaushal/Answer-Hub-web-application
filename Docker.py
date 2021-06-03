@@ -17,4 +17,4 @@ RUN chmod 777 -R *
 EXPOSE 8080
 
 # Running StreamLit Application
-CMD streamlit run --server.port 8080 --server.enableCORS false /usr/src/app/Streamlitapp.py
+CMD streamlit run --server.port 8080 --server.enableCORS false Streamlitapp.py
