@@ -8,6 +8,7 @@ env:
   PROJECT_ID: ${{ secrets.GCP_PROJECT }}
   SERVICE: mgmt590-webapp
   REGION: us-central1
+  REST_API_URL: ${{ secrets.REST_API_URL }}
 
 jobs:
   deploy:
