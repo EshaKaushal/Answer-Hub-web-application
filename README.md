@@ -37,6 +37,7 @@ A user can perform the following operations using the app -<br>
 ### Dependencies
 The application uses a lot of python packages and libraries to ensure that both the REST API and application UI are functional. Packages currently in use are -
 |Packages|Function|installation|
+|----|----|----|
 |streamlit|Use to render the UI|pip install streamlit|
 |pandas|Used to work with data files |pip install pandas
 |requests|Used to get and send requests to API |pip install requests
