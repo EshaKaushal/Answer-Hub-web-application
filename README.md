@@ -17,8 +17,6 @@ Our application **'Answers Hub'** allows user to ask questions by providing cont
     <img src="/images/DeleteModel.PNG">
 
 3)  **Action 3 - Answer a question** - This route allows a user to delete an existing model on the server such that it is no longer available for inference.
-      Method and path; DELETE /models?model=<model name>
-      Sample request paramaters & respones -
     <img src="/images/AnswerQuestion.PNG">
 
 4)  **Action 4 - Bulk Upload of questions** - This route uses one of the available models to answer a question, given the context provided in the JSON payload.
