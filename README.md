@@ -52,11 +52,11 @@ A user can simply executing the following command -
 
 ### Build and Run the WebApp locally via Docker
 To build and run the application locally a user would need to follow the below process - <br>
-1) **Develop application** - Our application is already developed and the code can be access in 'Streamlitapp.py'. User can download the file and run it locally using the following command <br>
+1) **Get the application** - To run the application locally, one needs to get the application source code onto their local machine. Our application is already developed and the code can be accessed in 'Streamlitapp.py'. User can start by cloning our repo command and using the following command to run the app. <br>
 ``` streamlit run <app.py> ```.
 The application would be active on the local host. Application can be closed using Ctrl+C.<br>
 
-2) **Build a Docker image for app with Docker engine** - Here image refers to the bundle that includes your app and dependencies (listed in requirements.txt). We will specify the details of how to build an image in a file called 'Dockerfile'. Below is one sample of DockerFile - <br>
+2) **Build a Docker image for app with Docker engine** - Here image refers to the bundle that includes your app and dependencies (listed in requirements.txt). We will specify the details of how to build an image in a file called 'Dockerfile'. A Dockerfile is simply a text-based script of instructions that is used to create a container image. Below is one sample of DockerFile - <br>
 
 ```
 FROM python:3.7-slim
@@ -72,9 +72,11 @@ RUN pip install -r requirements.txt
 
 CMD ["streamlit", "run", "--server.port", "8080", "--server.enableCORS", "false", "Streamlitapp.py"]
 ```
+Please check that the file Dockerfile has no file extension like ```.txt.``` Some editors may append this file extension automatically and this would result in an error in the next step.
 
 3) **Building Docker image in the Active Directory/Folder** - After we have added the dependencies, we will run the docker container using the command - <br>
 ``` sudo docker build -t <image-name> . ```
+The . at the end of the docker build command tells that Docker should look for the Dockerfile in the current directory.
 
-4) **Deploy a Docker container, based on the image and from the registry, to a VM** - Now we run the docker image with ports defined for communication between local machine and docker image . User can use the following command <br>
+4) **Start the app container** - Now we run the docker image with ports defined for communication between local machine and docker image . User can use the following command <br>
 ``` sudo docker run -it -p 8080:8080 <image-name> /app/<aap-name>.py ```
