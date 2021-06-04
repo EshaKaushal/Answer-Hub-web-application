@@ -15,7 +15,7 @@ A user can access the application hosted on cloud using the public URL. Each use
 
 Here is our architecture diagram. <br>
 
-<img src="/images/AppArchitecture.PNG">
+<img src="/images/ApplicationArchitecture.PNG">
 
 ### Application Functionalities
 A user can perform the following operations using the app -<br>
