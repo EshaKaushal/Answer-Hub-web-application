@@ -8,7 +8,7 @@ import os
 #url = "https://mgmt590-restapi-es7glm5rsq-uc.a.run.app"
 url = format(os.environ.get('REST_API_URL'))
 
-st.title("Question Answering Application")
+st.title("Answers Hub - Question Answering App")
 
 def getModelList():
     payload_modellist = ""
