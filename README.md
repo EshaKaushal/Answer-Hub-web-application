@@ -1,8 +1,6 @@
-# Mgmt590-Assignment3 - Creating web application
+# Answers Hub web application
 ### Submission Details
-|Name|PUID|
-|----|----|
-|Esha Kaushal| 0032356932|
+
 
 ## Application Description
 The application can be accessed using the URL - https://mgmt590-webapp-es7glm5rsq-uc.a.run.app
