@@ -1,7 +1,4 @@
 # Answers Hub web application
-### Submission Details
-
-
 ## Application Description
 The application can be accessed using the URL - https://mgmt590-webapp-es7glm5rsq-uc.a.run.app
 
